@@ -11,4 +11,20 @@ Python is a fast evolving langugage which changes overnight. So building it beco
 
 - Now set these variables in your `CMakeLists.txt` and `add_subdirectory` then `target_link_libraries(<YOUR-TARGET> cpython-portable)` and done! Remember to set include directories to `<PYSRC>/Python`
 	
-	
+# note
+The following modules have been statically linked:
+- `zlib`
+- `errno`
+- `select`
+- `struct`
+- `binascii`
+- `csv`
+- `datetime`
+- `heapq`
+- `json`
+- `array`
+- `sqlite3`
+- `socket` (broken on Win32 😕)
+- `sha1, sha256, sha512, sha3, md5, blake2`
+
+**Importing a shared module will SEGV on Linux!**
