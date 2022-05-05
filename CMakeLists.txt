@@ -14,7 +14,7 @@ message("Using Python sources in ${PYSRC}")
 if(NOT DEFINED PYVER)
     message(FATAL_ERROR "Set the version of extracted Python sources using -DPYVER=<major>.<minor>")
 endif()
-message("Using Python version in ${PYVER}")
+message("Using Python version ${PYVER}")
 
 if(NOT ${PYVER} VERSION_EQUAL ${PYSRC_LASTGOOD})
     message(WARNING "Not using the last good version ${PYSRC_LASTGOOD}. Compatibility is not guaranteed")
