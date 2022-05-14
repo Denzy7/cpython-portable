@@ -806,6 +806,9 @@ if(HAVE_LIBSQLITE3)
 
     add_library(pysqlite3 STATIC ${pysqlite3_src})
     target_compile_definitions(pysqlite3 PRIVATE MODULE_NAME="sqlite3")
+    set_target_properties(pysqlite3 PROPERTIES
+                      POSITION_INDEPENDENT_CODE ON)
+
 endif(
 )
 #if(HAVE_LIBFFI)
